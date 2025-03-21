@@ -1,0 +1,105 @@
+.news-slider {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 20px !important;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 calc(100% / 3);
+    box-sizing: border-box;
+    padding: 10px;
+    transform: scale(0.8);
+    transition: transform 0.5s ease;
+}
+
+.slide.active {
+    transform: scale(1);
+}
+
+.slide .slide-content {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover .slide-content {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.slide:hover img {
+    transform: scale(1.1);
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    //transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: rgba(6, 5, 75, 0.9);
+    transform: scale(1.1);
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 calc(100% / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        flex: 0 0 100%;
+    }
+
+    .slide.active {
+        transform: scale(1);
+    }
+
+    .slick-prev,
+    .slick-next {
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+}

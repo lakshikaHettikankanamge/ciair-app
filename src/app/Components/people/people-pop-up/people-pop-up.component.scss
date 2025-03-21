@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  background-color: #b6b6b6;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.details {
+  flex: 1; /* Take up remaining space */
+}
+
+.details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.details p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.details a {
+  color: #007bff; /* Blue color */
+  text-decoration: none;
+}
+
+.details a:hover {
+  text-decoration: underline;
+}
+
+.image {
+  width: 10vw;
+  height: 20vh; /* Set a fixed height */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.image img {
+  object-fit: cover; /* Ensure the image covers the entire container */
+  width: 100%; /* Ensure the image fills its container */
+  height: 100%; /* Ensure the image fills its container */
+  border-radius: 5%;
+}
+
+.profile {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  background-color: #cfcdcd;
+}
+
+.graph {
+  padding: 20p;
+}

@@ -1,0 +1,44 @@
+/* Style for the main container */
+div {
+    max-width: 800px; /* Limit the width of the publication section */
+    margin: 20px auto; /* Center the container with top/bottom margin */
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #ccc; /* Add a light border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style for the publication title */
+h4 {
+    font-size: 1.5em; /* Increase font size for the title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #333; /* Dark text color */
+}
+
+/* Style for the abstract paragraph */
+p {
+    font-size: 1em; /* Normal font size for the text */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+    color: #666; /* Gray text color */
+}
+
+/* Style for the authors' links */
+a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+/* Style for the publication year and paper link */
+p:last-of-type {
+    font-style: italic; /* Italic style for year and paper link */
+    color: #555; /* Slightly darker gray */
+    margin-top: 10px; /* Space above year and link */
+}

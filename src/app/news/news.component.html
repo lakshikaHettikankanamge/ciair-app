@@ -1,0 +1,14 @@
+<div class="news-slider">
+    <div class="carousel">
+      <div
+        class="slide"
+        *ngFor="let item of visibleNewsItems; let i = index"
+        [ngClass]="{ 'active': i === 1 }">
+        <div class="slide-content">
+          <img [src]="item.img" alt="News Image">
+        </div>
+      </div>
+    </div>
+    <button class="slick-prev" (click)="slide(-1)">&lt;</button>
+    <button class="slick-next" (click)="slide(1)">&gt;</button>
+</div>

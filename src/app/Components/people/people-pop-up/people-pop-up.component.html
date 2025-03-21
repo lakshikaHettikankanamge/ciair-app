@@ -1,0 +1,43 @@
+<div class="header">
+  <div class="details">
+    <h1>{{ researcherModel.name }}</h1>
+    <p>Email: {{ researcherModel.email }}</p>
+    <p>Mobile: {{ researcherModel.mobile }}</p>
+    <p>
+      LinkedIn:
+      <a href="{{ researcherModel.linkedIn }}" target="_blank">{{
+        researcherModel.name
+      }}</a>
+    </p>
+    <p>
+      Google Scholar:
+      <a href="{{ researcherModel.googleScholar }}" target="_blank">{{
+        researcherModel.name
+      }}</a>
+    </p>
+  </div>
+
+  <div class="image">
+    <img [src]="this.image" alt="{{ researcherModel.name }}" />
+  </div>
+</div>
+
+<div class="profile">
+  <h3><b>Profile</b></h3>
+  <p>{{ researcherModel.profile }}</p>
+  <br />
+</div>
+<hr />
+
+<div class="graph">
+  <div id="chart">
+    <div style="text-align: center">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [title]="chartOptions.title"
+      ></apx-chart>
+    </div>
+  </div>
+</div>

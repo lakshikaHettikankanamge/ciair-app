@@ -1,0 +1,67 @@
+<body>
+  <div class="container">
+    <app-navbar></app-navbar>
+    <app-header></app-header>
+
+    <br />
+    <div class="filter">
+      <button (click)="toggleDropdowns()">
+        {{ showDropdowns ? "Hide Options" : "Filter Publications" }}
+      </button>
+
+      <div class="dropdown-menus" *ngIf="showDropdowns">
+        <div class="dropdown-container">
+          <!-- New container for flexbox -->
+          <div class="dropdown">
+            <label>Sort By</label>
+            <select id="dropdown" (change)="sortBychange($event)">
+              <option value="Year - Descending">Year - Descending</option>
+              <option value="Year - Ascending">Year - Ascending</option>
+            </select>
+          </div>
+
+          <div class="dropdown">
+            <label>Filter By Year</label>
+            <div class="row">
+              <select id="dropdown" (change)="onSelectyear($event)">
+                <option *ngFor="let year of years" [value]="year">
+                  {{ year }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <label>Filter By Researcher</label>
+            <select id="dropdown" (change)="onSelectresearcher($event)">
+              <option
+                *ngFor="let researcher of researchers"
+                [value]="researcher"
+              >
+                {{ researcher }}
+              </option>
+            </select>
+
+
+          </div>
+
+          <button (click)="clearYearsFilter($event)">Clear All</button>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div *ngFor="let publications of filteredpublications">
+      <div class="article-card" (click)="onCardClick(publications)">
+        <h4>{{ publications.area }}</h4>
+        <h4>{{ publications.title }}</h4>
+        <div *ngFor="let author of publications.authors">
+          <!-- Iterate over authors of the current publication -->
+          <p>{{ author[0].name }}</p>
+          <!-- Display author name -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,8 @@
+<div>
+    <h4> {{ publicationSet.title }} </h4>
+    <p>{{ publicationSet.abstract }}</p>
+    <div *ngFor="let author of publicationSet.authors">
+        <a [href]="author[0].googleScholar" target="_blank">{{ author[0].name }}</a> <!-- Create hyperlink -->
+      </div>    <p>{{ publicationSet.year }}</p>
+      <a [href]="publicationSet.paperLink " target="_blank">{{ publicationSet.paperLink }}</a> <!-- Create hyperlink -->
+    </div>

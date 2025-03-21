@@ -1,0 +1,140 @@
+<body>
+  <div class="container">
+    <app-navbar></app-navbar>
+    <app-header></app-header>
+
+    
+    <div class="bg-image">
+    <!-- Search form -->
+    <div class="search-form">
+      <input
+        type="text"
+        placeholder="Search..."
+        class="search-input"
+        [(ngModel)]="searchQuery"
+        (input)="search()"
+      />
+      
+      <button (click)="clearSearch()">Clear</button>
+    </div>
+
+    <div class="row">
+      <ng-container *ngIf="filteredBOD.length > 0">
+        <!-- People icons -->
+        <div class="people-icons">
+          <div
+            *ngFor="let person of filteredBOD"
+            class="person-icon"
+            (click)="openDialog(person)"
+          >
+            <img
+              [src]="person.imageURL"
+              alt="{{ person.name }}"
+              class="person-image"
+            />
+
+            <div class="person-details">
+              <p class="person-name">
+                <b>{{ person.name }}</b>
+              </p>
+
+              <p>Board Of Directors</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="filteredSeniorAdvisors.length > 0">
+        <!-- People icons -->
+        <div class="people-icons">
+          <div
+            *ngFor="let person of filteredSeniorAdvisors"
+            class="person-icon"
+            (click)="openDialog(person)"
+          >
+            <img
+              [src]="person.imageURL"
+              alt="{{ person.name }}"
+              class="person-image"
+            />
+            <div class="person-details">
+              <p class="person-name">
+                <b>{{ person.name }}</b>
+              </p>
+
+              <p>Advisory Board</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="filteredCollaborators.length > 0">
+        <div class="people-icons">
+          <div
+            *ngFor="let person of filteredCollaborators"
+            class="person-icon"
+            (click)="openDialog(person)"
+          >
+            <img
+              [src]="person.imageURL"
+              alt="{{ person.name }}"
+              class="person-image"
+            />
+            <div class="person-details">
+              <p class="person-name">
+                <b>{{ person.name }}</b>
+              </p>
+
+              <p>Advisors</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- <h2>Collaborators</h2>
+
+      <div class="people-icons">
+        <div
+          *ngFor="let person of filteredCollaborators"
+          class="person-icon"
+          (click)="openDialog(person)"
+        >
+          <img
+            [src]="person.imageURL"
+            alt="{{ person.name }}"
+            class="person-image"
+          />
+          <p class="person-name">{{ person.name }}</p>
+        </div>
+      </div> -->
+      
+    </div>
+  </div>
+
+
+    <div class="banner-section">
+      <div class="banners-container">
+          <div class="banner">
+              <img
+                  src="assets/Images/People/bg.png"
+                  alt="Black Friday Banner"
+                  class="banner-image"
+              />
+          </div>
+          <!-- Additional banners can be uncommented and used as needed -->
+          <!-- <div class="banner">
+              <img src="assets/Images/Banners/black_friday_facebook_banner_02.jpg" alt="Black Friday Banner" class="banner-image">
+          </div>
+          <div class="banner">
+              <img src="assets/Images/Banners/7122265.jpg" alt="Black Friday Banner" class="banner-image">
+          </div>
+          <div class="banner">
+              <img src="assets/Images/Banners/Business-Web-Banner-19.jpg" alt="Black Friday Banner" class="banner-image">
+          </div> -->
+      </div>
+      <button class="connect-button">Let's talk about 
+        your project..<i class="fa-solid fa-arrow-right"></i> </button>
+  </div>
+    <app-footer></app-footer>
+  </div>
+</body>

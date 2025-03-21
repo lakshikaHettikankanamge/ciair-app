@@ -1,0 +1,25 @@
+<nav class="menu-bar">
+  <div class="logo-container">
+    <img src="assets/Images/Logos/ciair_logo.jpg" alt="Logo" class="logo">
+  </div>
+  <ul class="menu-list" [ngClass]="{'show-menu': showMenu}">
+    <li routerLink="/Home" routerLinkActive="active" class="menu-item">Main</li>
+    <li routerLink="/People" routerLinkActive="active" class="menu-item">People</li>
+    <li routerLink="/Research" routerLinkActive="active" class="menu-item">Research</li>
+    <li routerLink="/funding" routerLinkActive="active" class="menu-item">Funding & Grants</li>
+    <li routerLink="/About" routerLinkActive="active" class="menu-item">About</li>
+    <li routerLink="/collaborate" routerLinkActive="active" class="menu-item">Collaborate</li>
+    <li routerLink="/blogs" routerLinkActive="active" class="menu-item">Blogs</li>
+  </ul>
+  <div class="search-bar">
+    <div class="search-icon">
+      <i class="fas fa-search"></i>
+    </div>
+    <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" (keyup.enter)="onSearch()" />
+  </div>
+  <div class="menu-icon" (click)="toggleMenu()">
+    &#9776; <!-- This is the hamburger icon -->
+  </div>
+  <!-- Overlay to capture clicks outside the menu -->
+  <div class="overlay" *ngIf="showMenu" (click)="toggleMenu()"></div>
+</nav>

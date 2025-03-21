@@ -1,0 +1,220 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  flex: 1;
+  max-width: 600px;
+  min-width: 200px;
+  border-radius: 25px;
+  border-width: 5px;
+  border-color: #2563EB;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  flex: 0 0 auto;
+  margin-left: 10px;
+  border-radius: 25px;
+  border-width: 5px;
+  border-color: #2563EB;
+  background-color: aqua;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-input {
+    width: 70%;
+  }
+  button {
+    width: 50%;
+    margin-top: 10px;
+  }
+}
+
+.connect-button {
+  width: 257px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #fff;
+  transform: scale(1.05);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .connect-button {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-button {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.people-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.person-icon {
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.person-icon:hover {
+  transform: scale(1.05);
+}
+
+.person-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #B2B2B2; /* Ash border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.person-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.person-details {
+  margin-top: 10px;
+}
+
+.person-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.banners-container {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .banners-container {
+    width: 100%;
+  }
+}
+
+.banner {
+  flex: 0 0 33.33%;
+  height: auto;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex: 0 0 100%;
+  }
+}
+
+.bg-image {
+  background-image: url('../../../assets/Images/People/bg1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .bg-image {
+    background-size: contain;
+    background-position: center top;
+    min-height: 50vh;
+  }
+}
+
+/* Media queries for responsive person images */
+@media (max-width: 768px) {
+  .person-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .person-image {
+    width: 80px;
+    height: 80px;
+  }
+}

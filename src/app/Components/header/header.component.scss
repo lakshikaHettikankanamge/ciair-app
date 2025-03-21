@@ -1,0 +1,47 @@
+/* Base Styles */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: auto; 
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+}
+
+.Textlogo {
+  height: 100px; 
+  margin-right: 40px; 
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo-container {
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .Textlogo {
+    height: 20px;
+    margin-right: 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .Textlogo {
+    height: 30px;
+  }
+}
